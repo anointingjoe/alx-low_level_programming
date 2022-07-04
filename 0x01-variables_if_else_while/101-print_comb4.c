@@ -3,25 +3,35 @@
 #include <stdio.h>
 
 /**
- *main - Task 11 program prints different combination of three digits.
- *
- *Return: 0
+ *main - Task 11 program that prints all possible combination of three digit*
+ *  Return: 0
  **/
+
 int main(void)
 {
-int i, j, k;
-int arr[3];
-for (i = 0; i < 3; i++)
+int ch;
+int n;
+int m;
+for (ch = 48; ch <= 57; ch++)
 {
-for (j = 0; j < 3; j++)
+for (n = 49; n <= 57; n++)
 {
-for (k = 0; k < 3; k++)
+for (m = 50; m <= 57; m++)
 {
-if (i != j && j != k && k != i)
+if (n > ch && m > n)
 {
-putchar("[%d %d %d]\n", arr[i], arr[j], arr[k]);
+putchar(ch);
+putchar(n);
+putchar(m);
+if (ch != 55 || n != 56 || m != 57)
+{
+putchar(44);
+putchar(32);
+putchar(10);
 }
 }
 }
 }
+}
+return (0);
 }
