@@ -2,7 +2,7 @@
 
 /**
  * print_times_table - prints the n times table, starting with 0
- * @n: number of the times table
+ * @n: print_times_table
  */
 void print_times_table(int n)
 {
@@ -17,6 +17,7 @@ k = j * i;
 if (j == 0)
 {
 _putchar(k + '0');
+}
 else if (k < 10 && j != 0)
 {
 _putchar(',');
