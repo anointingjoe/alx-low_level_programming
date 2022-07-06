@@ -4,9 +4,9 @@
  *
  * Return: 0
  */
-void print_alphabet(void)
+void print_alphabet(void);
 {
-char c;
+char k;
 
 for (k = 'a'; k <= 'z'; k++)
 {
