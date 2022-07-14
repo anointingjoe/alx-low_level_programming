@@ -1,19 +1,19 @@
 #include "main.h"
-
 /**
-* string_toupper -> converting any string to upper case
-* @x: string param
-* Return: string
+ * reverse_array - reverse a int array
+ * @a: pointer
+ * @n: array length
+ * Return: void
 */
-char *string_toupper(char *x)
-{
-	int i = 0;
 
-	while (x[i])
-	{
-		if (x[i] >= 97 && x[i] <= 122)
-			x[i] = x[i] - 32;
-		i++;
-	}
-	return (x);
+void reverse_array(int *a, int n)
+{
+int i = 0, half;
+
+for (half = n / 2; half > 0; half--, i++)
+{
+	a[n - i - 1] += a[i];
+	a[i] = a[n - i - 1] - a[i];
+	a[n - i - 1] = a[n - i - 1] - a[i];
+}
 }
