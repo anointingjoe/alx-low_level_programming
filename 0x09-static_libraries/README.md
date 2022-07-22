@@ -1,0 +1,1 @@
+# stactic librabry task
